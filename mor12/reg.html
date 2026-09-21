@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌻 ¡Feliz Dia del Amor mi More! 🌻</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #201b03, #4b3a18, #020202);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* 🌸 Decoración de fondo (flores y corazones flotando) */
+        .decoracion {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0; left: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .decoracion span {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.6;
+            animation: flotarDecor 6s ease-in-out infinite;
+        }
+        @keyframes flotarDecor {
+            0%,100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(10deg); }
+        }
+
+        h1 {
+            color: #f57f17;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: aparecer 2s ease forwards;
+            opacity: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 📦 CONTENEDOR: IMAGEN + MENSAJE AL LADO */
+        .fila-contenido {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem; /* Espacio entre imagen y cuadro */
+            flex-wrap: wrap; /* Se acomoda solo en celular */
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: subir 2s ease 1s forwards;
+        }
+
+        /* 🌸 TU IMAGEN PERSONALIZADA */
+        .mi-flor {
+            width: 340px;
+            height: 340px;
+            object-fit: cover;
+            border-radius: 25%;
+            cursor: pointer;
+            animation: flotar 3s ease-in-out infinite;
+            box-shadow: 0 0 25px rgba(255, 193, 7, 0.5);
+            transition: all 0.4s ease;
+        }
+        .mi-flor:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 35px rgba(255, 193, 7, 0.7);
+        }
+
+        /* 💌 CUADRO DEL MENSAJE */
+        .mensaje {
+            color: #e65100;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 2.5rem 2rem;
+            width: 450px;
+            background: rgba(255, 255, 255, 0.65);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(255, 179, 0, 0.25);
+            line-height: 2;
+            backdrop-filter: blur(8px);
+        }
+        .mensaje strong { color: #0c0c0b; font-size: 1.4rem; }
+
+        button {
+            margin-top: 2.5rem;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            background: #ffc107;
+            border: none;
+            border-radius: 50px;
+            color: #5d4037;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+            transition: all 0.3s;
+            opacity: 0;
+            animation: aparecer 2s ease 2s forwards;
+            position: relative;
+            z-index: 1;
+        }
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 193, 7, 0.5);
+        }
+
+        /* 🎬 ANIMACIONES */
+        @keyframes aparecer { to { opacity:1; } }
+        @keyframes subir { to { opacity:1; transform: translateY(0); } }
+        @keyframes flotar {
+            0%,100% { transform: translateY(0) rotate(-3deg); }
+            50% { transform: translateY(-12px) rotate(3deg); }
+        }
+        .corazon {
+            position: absolute;
+            font-size: 1.5rem;
+            animation: caer 5s linear forwards;
+            pointer-events: none;
+            z-index: 2;
+        }
+        @keyframes caer {
+            0% { transform: translateY(-50px); opacity:1; }
+            100% { transform: translateY(100vh); opacity:0; }
+        }
+
+        /* 📱 Para celular: se apila verticalmente */
+        @media (max-width: 768px) {
+            .fila-contenido { flex-direction: column; gap: 2rem; }
+            .mensaje { width: 90%; padding: 2rem 1.5rem; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 🌻 Decoración de fondo -->
+    <div class="decoracion">
+        <span style="top: 5%; left: 5%; animation-delay: 0s;">🌻</span>
+        <span style="top: 15%; left: 90%; animation-delay: 0.5s;">💛</span>
+        <span style="top: 60%; left: 3%; animation-delay: 1s;">🌻</span>
+        <span style="top: 80%; left: 95%; animation-delay: 1.5s;">🌻</span>
+        <span style="top: 30%; left: 92%; animation-delay: 2s;">🌻</span>
+        <span style="top: 90%; left: 8%; animation-delay: 2.5s;">💛</span>
+        <span style="top: 45%; left: 2%; animation-delay: 3s;">🌻</span>
+        <span style="top: 20%; left: 8%; animation-delay: 3.5s;">💛</span>
+    </div>
+
+    <h1>✨ ¡Para el mi amada esposa! ✨</h1>
+
+    <!-- 📦 IMAGEN + MENSAJE AL LADO -->
+    <div class="fila-contenido">
+        <img 
+            src="45.png" 
+            alt="Girasoles 💛" 
+            class="mi-flor" 
+            onclick="lanzarCorazones()"
+        >
+
+        <div class="mensaje">
+            <strong>✨ ¡mi more corazon de melon! ✨</strong><br><br>
+            si puiera volver a elegir, entre millones de caminos<br>
+            y personas volveria a elegirte a ti. Contigo entendi <br>
+            que el amor no se trata solamente de momentos perfectos<br>
+            sino de permanecer juntos, apoyarnos y seguir construyendo<br>
+            nuestra historia dia tras dia.<br><br>
+            🌻 Que cada día brilles más 🌻<br>
+            <em>— Con todo mi amor 💛</em>
+        </div>
+    </div>
+
+    <button onclick="lanzarMuchasFlores()">🎁 todo lo bonito empiza con un clic. 🎁</button>
+
+    <script>
+        // 💛 Lluvia de corazones al tocar la flor
+        function lanzarCorazones() {
+            for (let i = 0; i < 25; i++) {
+                setTimeout(() => {
+                    const corazon = document.createElement('span');
+                    corazon.innerHTML = '💛';
+                    corazon.className = 'corazon';
+                    corazon.style.left = Math.random() * 100 + 'vw';
+                    corazon.style.top = '-20px';
+                    corazon.style.animationDuration = (3 + Math.random() * 3) + 's';
+                    document.body.appendChild(corazon);
+                    setTimeout(() => corazon.remove(), 6000);
+                }, i * 80);
+            }
+        }
+
+        // 🌸 Llena la pantalla de flores
+        function lanzarMuchasFlores() {
+            const cantidad = 35;
+            const flores = ['🌻', '🌻', '🌻', '🌻', '💛', '🌻', '🌻', '💖'];
+            for (let i = 0; i < cantidad; i++) {
+                setTimeout(() => {
+                    const flor = document.createElement('div');
+                    flor.innerHTML = flores[Math.floor(Math.random() * flores.length)];
+                    flor.style.position = 'fixed';
+                    flor.style.left = Math.random() * 90 + 'vw';
+                    flor.style.top = Math.random() * 80 + 'vh';
+                    flor.style.fontSize = (1.5 + Math.random() * 2.5) + 'rem';
+                    flor.style.opacity = '0.85';
+                    flor.style.zIndex = '1';
+                    flor.style.animation = 'flotar 4s ease-in-out infinite';
+                    document.body.appendChild(flor);
+                }, i * 100);
+            }
+            alert('💛🌻 ¡La primavera floreció por completo! 💛🌻');
+        }
+    </script>
+</body>
+</html>
